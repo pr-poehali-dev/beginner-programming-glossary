@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { Input } from '@/components/ui/input';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -165,6 +166,7 @@ const Index = () => {
               <a href="#home" className="text-sm font-medium hover:text-primary transition-colors">Главная</a>
               <a href="#dictionary" className="text-sm font-medium hover:text-primary transition-colors">Словарь</a>
               <a href="#popular" className="text-sm font-medium hover:text-primary transition-colors">Популярные</a>
+              <Link to="/lessons" className="text-sm font-medium hover:text-primary transition-colors">Уроки</Link>
               <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">О проекте</a>
             </div>
           </nav>
