@@ -122,6 +122,7 @@ const terms: Term[] = [
 const Dictionary = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTab, setActiveTab] = useState('all');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const filteredTerms = useMemo(() => {
     let filtered = terms;
@@ -158,13 +159,47 @@ const Dictionary = () => {
                 КодБаза
               </span>
             </Link>
-            <div className="flex items-center gap-6">
+            <div className="hidden md:flex items-center gap-6">
               <Link to="/" className="text-sm font-medium hover:text-primary transition-colors">Главная</Link>
               <Link to="/dictionary" className="text-sm font-medium text-primary">Словарь</Link>
               <Link to="/lessons" className="text-sm font-medium hover:text-primary transition-colors">Уроки</Link>
             </div>
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden p-2 hover:bg-primary/10 rounded-lg transition-colors"
+              aria-label="Меню"
+            >
+              <Icon name={isMenuOpen ? "X" : "Menu"} className="w-6 h-6" />
+            </button>
           </nav>
         </div>
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-border/50 bg-background/95 backdrop-blur-sm animate-fade-in">
+            <div className="container mx-auto px-4 py-4 flex flex-col gap-3">
+              <Link 
+                to="/" 
+                onClick={() => setIsMenuOpen(false)}
+                className="text-sm font-medium hover:text-primary py-2 px-3 rounded-lg hover:bg-primary/10 transition-colors"
+              >
+                Главная
+              </Link>
+              <Link 
+                to="/dictionary" 
+                onClick={() => setIsMenuOpen(false)}
+                className="text-sm font-medium text-primary py-2 px-3 rounded-lg hover:bg-primary/10 transition-colors"
+              >
+                Словарь
+              </Link>
+              <Link 
+                to="/lessons" 
+                onClick={() => setIsMenuOpen(false)}
+                className="text-sm font-medium hover:text-primary py-2 px-3 rounded-lg hover:bg-primary/10 transition-colors"
+              >
+                Уроки
+              </Link>
+            </div>
+          </div>
+        )}
       </header>
 
       <main className="py-12 px-4">
