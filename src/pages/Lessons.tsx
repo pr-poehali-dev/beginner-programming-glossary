@@ -244,10 +244,10 @@ const Lessons = () => {
             <nav className="flex items-center justify-between">
               <Link to="/" className="flex items-center gap-2">
                 <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                  <Icon name="Code2" className="w-6 h-6 text-white" />
+                  <Icon name="Database" className="w-6 h-6 text-white" />
                 </div>
                 <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  DevDictionary
+                  КодБаза
                 </span>
               </Link>
               <Button variant="outline" onClick={handleBackToLessons}>
@@ -463,10 +463,10 @@ const Lessons = () => {
           <nav className="flex items-center justify-between">
             <Link to="/" className="flex items-center gap-2">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <Icon name="Code2" className="w-6 h-6 text-white" />
+                <Icon name="Database" className="w-6 h-6 text-white" />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                DevDictionary
+                КодБаза
               </span>
             </Link>
             <div className="flex items-center gap-6">

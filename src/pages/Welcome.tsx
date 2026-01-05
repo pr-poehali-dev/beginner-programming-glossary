@@ -31,8 +31,13 @@ const Welcome = () => {
             step >= 1 ? 'opacity-100 scale-100' : 'opacity-0 scale-50'
           }`}
         >
-          <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center animate-pulse">
-            <Icon name="Code2" className="w-12 h-12 text-white" />
+          <div className="w-24 h-24 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary via-secondary to-accent flex items-center justify-center animate-pulse relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 backdrop-blur-sm"></div>
+            <div className="relative z-10 flex items-center justify-center">
+              <Icon name="Database" className="w-10 h-10 text-white absolute" />
+              <Icon name="Code2" className="w-6 h-6 text-white/80 absolute -top-2 -right-2" />
+              <Icon name="BookOpen" className="w-5 h-5 text-white/60 absolute -bottom-1 -left-1" />
+            </div>
           </div>
         </div>
 
@@ -42,7 +47,7 @@ const Welcome = () => {
           }`}
         >
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-            DevDictionary
+            КодБаза
           </h1>
         </div>
 

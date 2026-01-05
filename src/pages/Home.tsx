@@ -10,11 +10,11 @@ const Home = () => {
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center justify-between">
             <Link to="/" className="flex items-center gap-2 animate-fade-in">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <Icon name="Code2" className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center relative">
+                <Icon name="Database" className="w-5 h-5 text-white" />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                DevDictionary
+                КодБаза
               </span>
             </Link>
             <div className="flex items-center gap-6">
@@ -194,7 +194,7 @@ const Home = () => {
                   </div>
                   <h3 className="text-2xl font-bold">Наша миссия</h3>
                   <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                    Мы создаём <strong className="text-primary">DevDictionary</strong> с любовью к образованию и верой в то, 
+                    Мы создаём <strong className="text-primary">КодБаза</strong> с любовью к образованию и верой в то, 
                     что каждый человек может стать разработчиком, если у него есть правильные инструменты для обучения. 
                     Наш проект полностью бесплатный и создан сообществом для сообщества.
                   </p>
@@ -229,14 +229,14 @@ const Home = () => {
         <div className="container mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-              <Icon name="Code2" className="w-5 h-5 text-white" />
+              <Icon name="Database" className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              DevDictionary
+              КодБаза
             </span>
           </div>
           <p className="text-muted-foreground">
-            © 2024 DevDictionary. Создано для начинающих разработчиков с ❤️
+            © 2024 КодБаза. Создано для начинающих разработчиков с ❤️
           </p>
         </div>
       </footer>
