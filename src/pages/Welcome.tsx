@@ -1,10 +1,17 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
 
 const Welcome = () => {
   const navigate = useNavigate();
   const [step, setStep] = useState(0);
+
+  const handleSkip = () => {
+    localStorage.setItem('welcomed', 'true');
+    localStorage.setItem('welcomeTimestamp', Date.now().toString());
+    navigate('/');
+  };
 
   useEffect(() => {
     const timer1 = setTimeout(() => setStep(1), 200);
@@ -28,6 +35,14 @@ const Welcome = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-background to-primary/10 flex items-center justify-center overflow-hidden relative">
+      <Button
+        onClick={handleSkip}
+        variant="ghost"
+        className="absolute top-6 right-6 z-50 text-muted-foreground hover:text-primary transition-colors"
+      >
+        Пропустить
+        <Icon name="ArrowRight" className="w-4 h-4 ml-2" />
+      </Button>
       <div 
         className={`absolute inset-0 transition-opacity duration-1000 ${
           step >= 4 ? 'opacity-0' : 'opacity-100'
