@@ -19,8 +19,14 @@ const App = () => {
 
   useEffect(() => {
     const welcomed = localStorage.getItem('welcomed');
-    if (!welcomed) {
+    const welcomeTimestamp = localStorage.getItem('welcomeTimestamp');
+    const now = Date.now();
+    const oneDay = 24 * 60 * 60 * 1000;
+    
+    if (!welcomed || !welcomeTimestamp || (now - parseInt(welcomeTimestamp)) > oneDay) {
       setShowWelcome(true);
+      localStorage.removeItem('welcomed');
+      localStorage.removeItem('welcomeTimestamp');
     }
     setIsChecking(false);
   }, []);
